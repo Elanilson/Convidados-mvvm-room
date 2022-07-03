@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_todos">
+
+    <fragment
+        android:id="@+id/nav_todos"
+        android:name="com.apkdoandroid.treino4.view.TodosFragment"
+        android:label="Todos"
+        tools:layout="@layout/fragment_todos" >
+        <argument
+            android:name="filter"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_presentes"
+        android:name="com.apkdoandroid.treino4.view.TodosFragment"
+        android:label="Presentes"
+        tools:layout="@layout/fragment_todos" >
+        <argument
+            android:name="filter"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_ausentes"
+        android:name="com.apkdoandroid.treino4.view.TodosFragment"
+        android:label="Ausentes"
+        tools:layout="@layout/fragment_todos" >
+        <argument
+            android:name="filter"
+            app:argType="integer"
+            android:defaultValue="2" />
+    </fragment>
+</navigation>
